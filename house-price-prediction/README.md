@@ -29,3 +29,15 @@ Put Kaggle's `train.csv` and `test.csv` in `data/`, then run notebooks 01 → 04
 ```
 pip install -r requirements.txt
 ```
+
+## Interactive app (Streamlit)
+```
+pip install -r requirements.txt
+streamlit run app.py
+```
+- **Price Studio** — sliders for 13 inputs, an animated house (size, quality, fireplace smoke, garage cars driving in) and a live price estimate. Click a car to honk, click the house or sun for day/night. Has presets and a "value of one upgrade" what-if chart.
+- **Explore** — animated scatter by decade built, neighborhood medians, price by garage size.
+- **Model** — actual vs predicted, error distribution, feature importance.
+
+`train_app_model.py` retrains the app's compact model from `data/train.csv` and refreshes `app_assets/` (model + a small data extract, so the app runs without the raw Kaggle files).
+Deploy free: push to GitHub → share.streamlit.io → pick `app.py`.
